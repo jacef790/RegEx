@@ -4,8 +4,8 @@ A regular expression (Regex) are a sequence of characters used to find matching 
 
 ## Summary
 
-We will be working with the regex to evaluate HEX values.
-`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+We will be working with the regex to evaluate HEX color values with alpha. <br>
+`^#([a-f0-9]{8}|[a-f0-9]{4})\b$`<br>
 Below there will be details on the components of regular expressions, to gain a better understanding. 
 
 ## Table of Contents
@@ -22,8 +22,19 @@ Below there will be details on the components of regular expressions, to gain a 
 ## Regex Components
 
 ### Anchors
+These are special sequences which match an empty substring. Meaning they themselves do not match anything, just denote something about the string, such as beginning or end. They are case sensitive.
+<ul>
+    <li>^, indicates the beginning of the string. Example (/^a, matches a. /^A, matches A)</li>
+    <li>$, indicates the end of the string. Example (/a$, matches a in the sequece cba)</li>
+</ul>
 
 ### Quantifiers
+Quantifies specify the number of charcters to match
+<ul>
+    <li>*, Matches pattern zero or more times. Example (/a*, matches with <strong>a</strong>ll instances of <strong>a</strong> <strong>a</strong>long the string) </li>
+    <li>+, Matches the preceding itme 1 or more times. Example (/o+/, matches o in to, and all o's in mooooooo)</li>
+    <li>{}, Matches exactly the number of occurances or the preceding item. Example (/a{3}, will not match aah, but will match aaah). If stated {1,2} will match at least 1 occurance and at most 2 occurances.</li>
+</ul>
 
 ### Grouping Constructs
 
