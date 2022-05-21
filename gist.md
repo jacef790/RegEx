@@ -5,7 +5,7 @@ A regular expression (Regex) are a sequence of characters used to find matching 
 ## Summary
 
 We will be working with the regex to evaluate HEX color values with alpha. <br>
-`^#([a-f0-9]{8}|[a-f0-9]{4})\b$`<br>
+`\B#(?:[a-fA-F0–9]{6}|[a-fA-F0–9]{3})\b`<br>
 Below there will be details on the components of regular expressions, to gain a better understanding. 
 
 ## Table of Contents
@@ -72,7 +72,9 @@ Added to end of expression for additional functionality
 \, allows us to search for character that is used in regex. Example(/\^a, will search for instance of ^a in string)
 
 
-###
+### Hex Value
+
+
 ## Author
 
 Jace Feinstein. Find me at https://github.com/jacef790
