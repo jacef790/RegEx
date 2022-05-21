@@ -37,8 +37,15 @@ Quantifies specify the number of charcters to match
 </ul>
 
 ### Grouping Constructs
+Grouping constructs help narrow down search
+<ul>
+    <li>[], Matches the first occurance of expression. Example ([ijk] will match the j in jace)</li>
+    <li>|, Will match either occurance passed. Example (/dog|cat/, will find dog and cat in sentance, "the cat doesn't like the dog.")</li>
+    <li>(), Matches the exact occurance. Example ((abc), matches abc, but not acb)
+</ul>
 
 ### Bracket Expressions
+Use brackets to create character set. Example ([abcde], will match a in tar)
 
 ### Character Classes
 
