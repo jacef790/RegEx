@@ -22,10 +22,11 @@ Below there will be details on the components of regular expressions, to gain a 
 ## Regex Components
 
 ### Anchors
-These are special sequences which match an empty substring. Meaning they themselves do not match anything, just denote something about the string, such as beginning or end. They are case sensitive.
+These are special sequences, which match an empty substring. Meaning they themselves do not match anything, just denote something about the string, such as beginning or end. They are case sensitive.
 <ul>
     <li>^, indicates the beginning of the string. Example (/^a, matches a. /^A, matches A)</li>
     <li>$, indicates the end of the string. Example (/a$, matches a in the sequece cba)</li>
+    <li>\b, matches a boundry. Example (/ee\b/, will not match with green because there is an n after the ee)</li>
 </ul>
 
 ### Quantifiers
@@ -73,7 +74,13 @@ Added to end of expression for additional functionality
 
 
 ### Hex Value
-
+/\B#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})\b/g. This will be our regex to find hex color values. To break it down further: <br>
+<ul>
+<li>#, needs to begin with #</li>
+<li>[a-fA-f0-9]{6}, lowercase character range from a to f, uppercase character range from A-F, numerical range from 0-9, must match 6 times.</li>
+<li>[a-fA-f0-9]{6}, lowercase character range from a to f, uppercase character range from A-F, numerical range from 0-9, must match 3 times.</li>
+<li>g, global search
+</ul>
 
 ## Author
 
