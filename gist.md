@@ -48,13 +48,31 @@ Grouping constructs help narrow down search
 Use brackets to create character set. Example ([abcde], will match a in tar)
 
 ### Character Classes
+Character classes distinguish character types to search for.
+
+<ul>
+    <li>\d, matches any digit</li>
+    <li>\w, matches any alphanumeric character</li>
+    <li>\s, matches single white space</li>
+</ul>
 
 ### The OR Operator
+|, is the or operator. Example(^a|b$|c*, matches a starting a string, b ending a string, or all instances of c)
+
 
 ### Flags
+Added to end of expression for additional functionality
+    <ul>
+        <li>g, will look globally</li>
+        <li>i, removes case sensitivity</li>
+    </ul>
+
 
 ### Character Escapes
+\, allows us to search for character that is used in regex. Example(/\^a, will search for instance of ^a in string)
 
+
+###
 ## Author
 
 Jace Feinstein. Find me at https://github.com/jacef790
